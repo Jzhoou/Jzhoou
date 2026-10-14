@@ -1,38 +1,72 @@
-# Jzhoou
+# Jzhoou · Zhenyu Zhao
 
-嵌入式系统 · 机器人 · 运动控制
+**汕头大学｜嵌入式开发 · 机械结构设计**
 
-Embedded Systems · Robotics · Motion Control
+面向秋招的项目作品集，求职方向为**嵌入式软件/控制开发、机械结构设计**。我的项目实践涵盖下位机固件、传感器与执行器接入、运动控制，以及 CAD 建模、装配迭代与样机验证。
 
-我关注嵌入式控制系统如何从传感器输入、实时决策走向可靠执行，主要使用 C/C++ 在 Arduino、STM32 与 TI MSPM0 平台上开发机器人下位机。实践内容覆盖电机与舵机驱动、编码器测速、PID 闭环、状态机、UART/I2C 通信，以及 OpenMV 视觉结果与运动控制的协同。
+我希望把程序与实物连接起来：既能围绕传感反馈编写控制逻辑，也能结合安装、布线和维护需求调整结构，并通过实物调试检验方案。
 
-## 技术方向
+## 能力与项目依据
 
-- **嵌入式开发：** C/C++、Arduino、STM32、TI MSPM0
-- **运动控制：** 直流电机与舵机、PWM、编码器测速、PID 闭环控制
-- **系统设计：** 治疗/任务状态机、传感器采集、执行器控制、下位机任务流
-- **接口与感知：** UART、I2C、OpenMV 视觉结果接收与联动
+| 方向 | 项目实践 | 对应项目 |
+| --- | --- | --- |
+| 嵌入式开发 | C/C++；Arduino、STM32F1、TI MSPM0G3507；外设驱动、定时中断与状态机 | 按摩仪、物流小车、MSPM0 电机控制 |
+| 运动控制与通信 | PWM、编码器测速、双电机增量式速度 PI；UART、I²C；步进电机与舵机控制 | MSPM0 电机控制、物流小车、按摩仪 |
+| 传感与系统联调 | 压力与阻抗采集、串口协议解析、OpenMV 视觉数据接收与动作协调 | 按摩仪、物流小车 |
+| 机械建模与装配 | SolidWorks 零件与装配建模；支撑与安装结构、空间布置及装配干涉调整 | AUV、按摩仪部分机械建模 |
+| 样机迭代与验证 | 试装反馈、线束与接口避让、穿线密封整改、气密与分段浅水测试记录 | AUV-CavePI |
 
-## 项目
+## 代表项目
 
-### [AUV-CavePI](https://github.com/Jzhoou/AUV-CavePI)｜独立完成
+### [CavePI 水下机器人原型](https://github.com/Jzhoou/AUV-CavePI)
 
-面向水下机器人原型的机械、电气与密封工程实践。围绕亚克力密封舱、推进器、电源管理与一体抽拉式内部支撑持续完成 CAD 迭代和实物装配，定位并多轮整改穿线螺栓漏点，在当次条件下通过短时气密与分段浅水检查。仓库同时如实记录尚未完成的完整浸没、长期水密和运动控制验证。
+**独立项目｜机械结构 · 电气集成 · 样机验证**
 
-### [Lymphedema-Massager](https://github.com/Jzhoou/Lymphedema-Massager)｜团队项目：下位机
+围绕亚克力密封舱、推进器和电源布局推进 CAD 设计与实物装配，重点处理有限舱内空间中的固定、布线与维护问题。
 
-仅负责下位机部分：设计治疗流程状态机，完成压力与阻抗数据采集、执行器控制及上下位机通信，使治疗步骤、传感反馈与动作输出在明确的状态转换中协同运行。
+- 设计并试装一体抽拉式内部支撑，结合试装结果调整铜柱配合、螺母沉孔、接口避让和内部高度。
+- 规划 14.8 V 4S 电源与分电路径，完成穿线封灌、装配及漏点定位，多轮改进线缆周边密封。
+- 已记录短时负压气密与头尾分段浅水检查；整机完整浸没、长期水密及水下运动控制仍待验证。
 
-### [Smart-logistics-cart](https://github.com/Jzhoou/Smart-logistics-cart)｜团队项目：下位机
+**仓库可查看：** CAD 迭代、实物照片、电源管理与测试日志。
 
-仅负责下位机部分：处理姿态信息与视觉结果接收，完成小车运动控制和任务流编排，将感知结果转换为可执行的底盘动作与阶段任务。
+### [淋巴水肿按摩仪工程原型](https://github.com/Jzhoou/Lymphedema-Massager)
 
-### [Line-following-aiming-car](https://github.com/Jzhoou/Line-following-aiming-car)｜团队项目：MSPM0 下位机
+**团队项目｜负责下位机电控，参与部分机械建模**
 
-仅负责 TI MSPM0 下位机部分：实现编码器采样与 PWM 输出，形成双电机速度闭环控制链路，为循迹和瞄准任务提供底盘控制基础。
+- 实现治疗流程状态机，组织压力与 AD5933 阻抗采集、舵机压力反馈及步进电机动作。
+- 完成 BM53 帧协议相关通信、命令处理与状态上报，连接设备控制流程和上位机联调。
+- 参与部分机械建模；仓库归档整机、按摩环、舵机按摩头、丝杆及压力传感器等团队模型。
 
-## English Summary
+**仓库可查看：** 下位机源码、机械模型与模块说明。WPF 上位机作为团队系统背景展示。该项目为工程原型。
 
-I focus on **embedded systems, robotics, and motion control**, building C/C++ firmware on Arduino, STM32, and TI MSPM0 platforms. My work covers motor and servo actuation, encoder-based speed measurement, PID control, state machines, UART/I2C communication, and integration of OpenMV vision results with motion control.
+### [智能物流搬运小车](https://github.com/Jzhoou/Smart-logistics-cart)
 
-I independently developed **AUV-CavePI**, including mechanical and electrical integration, CAD iteration, enclosure sealing work, and documented testing. I located a leak around the cable-penetration bolts and carried out multiple rounds of rework; under the recorded test conditions, the prototype passed short-duration vacuum and segmented shallow-water checks. In the three team projects above, my scope was limited to the embedded controller: treatment sequencing and sensing for **Lymphedema-Massager**, motion/task control and perception-result handling for **Smart-logistics-cart**, and an MSPM0-based dual-motor speed closed-loop control path for **Line-following-aiming-car**.
+**团队项目｜负责下位机电控**
+
+- 基于 Arduino 多文件工程编排扫码、取放、分类搬运及返回等阶段任务。
+- 接入 HWT101 姿态信息与 OpenMV 视觉结果，协调底盘电机、物料盘和舵机夹爪动作。
+- 完成扫码任务解析、串口屏交互及电机驱动协议命令组织。
+
+**仓库可查看：** 控制源码、任务流程与配套机械模型；机械资料作为团队项目背景归档。
+
+### [MSPM0G3507 双电机速度闭环](https://github.com/Jzhoou/Line-following-aiming-car)
+
+**团队项目｜负责 MSPM0 下位机电控**
+
+- 通过正交编码器 GPIO 中断计数和周期采样换算电机转速。
+- 为左右电机分别实现增量式速度 PI，结合方向 GPIO、PWM 输出与限幅形成速度控制链路。
+- 保留按键、定时器及外设实验工程，便于对照控制代码与 SysConfig 配置。
+
+**仓库可查看：** 电机控制、编码器采样与定时调度源码。
+
+## 其他项目
+
+- [STM32F1 循迹避障小车](https://github.com/Jzhoou/Line-following-obstacle-avoiding-car)：负责下位机固件，包含红外循迹、PWM 电机控制与 USART 外部感知数据接入。
+- [智慧草莓种植系统](https://github.com/Jzhoou/Smart-Strawberry-Growing-System)：负责下位机电控，包含环境采集、执行器控制、联网通信与串口 HMI 联调；历史快照的已知问题见仓库说明。
+
+## About me
+
+Student at **Shantou University**, seeking opportunities in **embedded development and mechanical design**. My projects cover C/C++ firmware, motor control, sensor integration, CAD modeling, physical assembly, and prototype testing.
+
+**CavePI** is my independent underwater-robot prototype. In team projects, I developed embedded controllers and also contributed to part of the **Lymphedema-Massager** mechanical modeling. Each repository documents my contribution and the available implementation or test evidence.
