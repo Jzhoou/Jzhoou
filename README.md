@@ -13,7 +13,7 @@
 | 嵌入式开发 | C/C++；Arduino、STM32F1、TI MSPM0G3507；外设驱动、定时中断与状态机 | 按摩仪、物流小车、MSPM0 电机控制 |
 | 运动控制与通信 | PWM、编码器测速、双电机增量式速度 PI；UART、I²C；步进电机与舵机控制 | MSPM0 电机控制、物流小车、按摩仪 |
 | 传感与系统联调 | 压力与阻抗采集、串口协议解析、OpenMV 视觉数据接收与动作协调 | 按摩仪、物流小车 |
-| 机械建模与装配 | SolidWorks 零件与装配建模；支撑与安装结构、空间布置及装配干涉调整 | AUV、按摩仪部分机械建模 |
+| 机械建模与装配 | SolidWorks 零件与装配建模；支撑与安装结构、空间布置及装配干涉调整 | AUV；按摩仪与物流小车的部分机械建模 |
 | 样机迭代与验证 | 试装反馈、线束与接口避让、穿线密封整改、气密与分段浅水测试记录 | AUV-CavePI |
 
 ## 代表项目
@@ -42,13 +42,15 @@
 
 ### [智能物流搬运小车](https://github.com/Jzhoou/Smart-logistics-cart)
 
-**团队项目｜负责下位机电控**
+**团队项目｜负责下位机电控，参与部分机械建模**
 
 - 基于 Arduino 多文件工程编排扫码、取放、分类搬运及返回等阶段任务。
 - 接入 HWT101 姿态信息与 OpenMV 视觉结果，协调底盘电机、物料盘和舵机夹爪动作。
 - 完成扫码任务解析、串口屏交互及电机驱动协议命令组织。
 
-**仓库可查看：** 控制源码、任务流程与配套机械模型；机械资料作为团队项目背景归档。
+参与部分机械建模，配合团队完成小车机械结构设计。`模型/` 目录归档整车装配体、配套零件与工程图。
+
+**仓库可查看：** 控制源码、任务流程与团队配套机械模型。
 
 ### [MSPM0G3507 双电机速度闭环](https://github.com/Jzhoou/Line-following-aiming-car)
 
@@ -69,4 +71,4 @@
 
 Student at **Shantou University**, seeking opportunities in **embedded development and mechanical design**. My projects cover C/C++ firmware, motor control, sensor integration, CAD modeling, physical assembly, and prototype testing.
 
-**CavePI** is my independent underwater-robot prototype. In team projects, I developed embedded controllers and also contributed to part of the **Lymphedema-Massager** mechanical modeling. Each repository documents my contribution and the available implementation or test evidence.
+**CavePI** is my independent underwater-robot prototype. In team projects, I developed embedded controllers and also contributed to part of the mechanical modeling for **Lymphedema-Massager** and **Smart-logistics-cart**. Each repository documents my contribution and the available implementation or test evidence.
